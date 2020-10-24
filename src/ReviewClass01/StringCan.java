@@ -1,4 +1,4 @@
-package Recap01;
+package ReviewClass01;
 
 public class StringCan {
 

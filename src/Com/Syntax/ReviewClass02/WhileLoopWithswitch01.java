@@ -1,4 +1,4 @@
-package Com.Syntax.ReviewClass04;
+package Com.Syntax.ReviewClass02;
 
 import java.util.Scanner;
 

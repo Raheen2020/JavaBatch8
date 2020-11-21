@@ -1,4 +1,4 @@
-package Com.Syntax.class09;
+package Com.Syntax.Class09;
 
 public class Task1 {
 

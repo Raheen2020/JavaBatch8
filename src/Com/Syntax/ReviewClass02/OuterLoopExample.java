@@ -1,4 +1,4 @@
-package Com.Syntax.ReviewClass04;
+package Com.Syntax.ReviewClass02;
 
 public class OuterLoopExample {
 

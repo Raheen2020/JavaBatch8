@@ -1,7 +1,5 @@
 package Com.Syntax.Class12;
 
-import Com.Syntax.class09.Arrays;
-
 public class Q5 {
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package Com.Syntax.Class25;
 
-final public class FinalParentClass {
+final class FinalParentClass {
     String name;
 
     public FinalParentClass(String name) {

@@ -1,10 +1,12 @@
-package ReviewClass03;
+package Com.Syntax.ReviewClass04;
+
+import Com.Syntax.Class20.Book;
 
 public class Student {
     String name;
     String rollNumber;
     int age;
-    Book[] books;
+    public Book[] books;
 
     public Student(String name, String rollNumber, int age) {
         this.name = name;

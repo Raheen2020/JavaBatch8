@@ -1,12 +1,10 @@
 package Com.Syntax.Class25;
 
-import com.sun.corba.se.impl.interceptors.PICurrent;
-
 public class FinalMethodChildClass extends FinalMethodClass{
 
     double PI=4.5;
     @Override
-    double add(double num1, double num2) {
+    public double add(double num1, double num2) {
 
         //  super.PI=45.;CE cannot change a final field
         // Math.PI;

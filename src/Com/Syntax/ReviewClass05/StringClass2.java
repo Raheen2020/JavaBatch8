@@ -1,6 +1,4 @@
-package Com.Syntax.ReviewClass5;
-
-import java.util.Scanner;
+package Com.Syntax.ReviewClass05;
 
 public class StringClass2 {
 

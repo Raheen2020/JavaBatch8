@@ -1,7 +1,5 @@
 package Com.Syntax.Class25;
 
-import com.sun.corba.se.impl.interceptors.PICurrent;
-
 public class FinalMethodClass {
     final double PI=3.14;
 

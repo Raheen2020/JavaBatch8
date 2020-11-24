@@ -1,4 +1,4 @@
-package Com.Syntax.ReviewClass5;
+package Com.Syntax.ReviewClass05;
 
 public class StringPool {
     public static void main(String[] args) {

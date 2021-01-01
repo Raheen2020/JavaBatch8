@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class Task1 {
     public static void main(String[] args) throws IOException {
-        String path="C:\\Users\\Asghar Nazir\\IdeaProjects\\JavaBatch8\\src\\com\\syntax\\class37\\configurations.properties";
+        String path="/Users/raheen/eclipse-workspace/JavaBatch08/src/Com/Syntax/Class37/configuration.properties";
         FileInputStream fileInputStream=new FileInputStream(path);
 
         Properties properties=new Properties();
@@ -22,13 +22,13 @@ public class Task1 {
         String password=(String)properties.get("password");
 
         if(browser.contains("Chrome")) {
-            System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","/Users/raheen/eclipse-workspace/JavaBatch08/Drivers/chromedriver");
             WebDriver driver = new ChromeDriver();
             driver.get(url);
             driver.findElement(By.id("email")).sendKeys(username);
             driver.findElement(By.id("pass")).sendKeys(password);
         }else if(browser.contains("firefox")){
-            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "/Users/raheen/eclipse-workspace/JavaBatch08/Drivers/geckodriver");
             WebDriver driver = new FirefoxDriver();
             driver.get(url);
             driver.findElement(By.id("email")).sendKeys(username);

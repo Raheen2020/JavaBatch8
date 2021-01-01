@@ -16,7 +16,7 @@ public class Task2 {
 
     public static void main(String[] args) throws IOException {
 
-        String dataFile = "C:\\Users\\Asghar Nazir\\IdeaProjects\\JavaBatch8\\src\\com\\syntax\\class37\\Book1.xlsx";
+        String dataFile = "/Users/raheen/eclipse-workspace/JavaBatch08/src/Com/Syntax/Class37/GenderTest.xlsx";
 
         System.out.println(dataFile);
 

@@ -13,7 +13,7 @@ public class Student {
     }
 
     public void printMarks() {
-
+        // number=15 CE
         System.out.println(" Marks " + marks);
     }
 
@@ -21,3 +21,4 @@ public class Student {
         System.out.println("Total number of student up till now " + numberOfStudentsEnrolled);
     }
 }
+

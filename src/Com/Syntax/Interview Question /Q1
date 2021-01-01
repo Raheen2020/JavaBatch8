@@ -1,0 +1,74 @@
+/**
+ * Have the function PalindromeCreator(str) take the str parameter being passed and determine if it is possible to create a palindromic string of minimum length 3 characters by removing 1 or 2 characters. For example: if str is "abjchba" then you can remove the characters jc to produce "abhba" which is a palindrome. For this example your program should return the two characters that were removed with no delimiter and in the order they appear in the string, so jc. If 1 or 2 characters cannot be removed to produce a palindrome, then return the string not possible. If the input string is already a palindrome, your program should return the string palindrome.
+ * <p>
+ * The input will only contain lowercase alphabetic characters. Your program should always attempt to create the longest palindromic substring by removing 1 or 2 characters (see second sample test case as an example). The 2 characters you remove do not have to be adjacent in the string.
+ * Examples
+ * Input: "mmop"
+ * Output: not possible
+ * Input: "kjjjhjjj"
+ * Output: k
+ */
+class Main {
+    private static final String RESULT_PALINDROME = "palindrome";
+    private static final String RESULT_NOT_POSSIBLE = "not possible";
+
+    private static String reverseString(String string) {
+        return new StringBuilder(string).reverse().toString();
+    }
+
+    private static boolean isPalindrome(String string) {
+        return string.equals(reverseString(string));
+    }
+
+    private static String createPalindrome(String str, boolean reverseOrder) {
+        if (reverseOrder) str = reverseString(str);
+
+        StringBuilder result = new StringBuilder();
+        StringBuilder temp = new StringBuilder(str);
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+                if (removeCharAndCheck(result, temp)) return result.toString();
+            }
+        }
+        return RESULT_NOT_POSSIBLE;
+    }
+
+    private static boolean removeCharAndCheck(StringBuilder result, StringBuilder temp) {
+        result.append(temp.charAt(0));
+        temp.deleteCharAt(0);
+        return isPalindrome(temp.toString()) && temp.length() > 2;
+    }
+
+    public static String PalindromeCreator(String str) {
+        //If the input string is already a palindrome
+        if (isPalindrome(str)) return RESULT_PALINDROME;
+
+        String fromFirst = createPalindrome(str, false);
+        String fromLast = createPalindrome(str, true);
+
+        if (!fromFirst.equals(RESULT_NOT_POSSIBLE) && !fromLast.equals(RESULT_NOT_POSSIBLE)) {
+            if (fromFirst.length() > 2 || fromLast.length() > 2) return RESULT_NOT_POSSIBLE;
+            if (fromFirst.length() > fromLast.length()) return fromLast;
+            return fromFirst;
+        }
+
+        if (!fromFirst.equals(fromLast) && fromFirst.equals(RESULT_NOT_POSSIBLE)) {
+            if (fromLast.length() > 2) return RESULT_NOT_POSSIBLE;
+            return fromLast;
+        }
+
+        if (!fromLast.equals(fromFirst) && fromLast.equals(RESULT_NOT_POSSIBLE)) {
+            if (fromFirst.length() > 2) return RESULT_NOT_POSSIBLE;
+            return fromFirst;
+        }
+
+        return RESULT_NOT_POSSIBLE;
+    }
+
+    public static void main(String[] args) {
+        // keep this function call here
+        System.out.print(PalindromeCreator("kkkkkjjjhjjj"));
+    }
+
+}
